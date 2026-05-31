@@ -14,6 +14,7 @@ public class Bus {
         this.fuelType = fuelType;
 }
 
+// returns the attributes from the Bus class
     public String getBusID() {
         return busID;
     }
