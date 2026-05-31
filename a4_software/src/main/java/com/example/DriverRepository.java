@@ -16,18 +16,18 @@ public class DriverRepository {
         for (Driver driver : drivers) {
             if (driver.getDriverID().equals(driverID)) {
                 return driver;
-}
-}
-    return null;
-    } 
+            }
+        }
+        return null;
+    }
 
     public int count() {
         return drivers.size();
-}
+    }
 
     public List<Driver> getDrivers() {
         return drivers;
-} 
+    }
 
     public void update(Driver driver) {
         drivers.remove(driver);

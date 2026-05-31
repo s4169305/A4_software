@@ -2,7 +2,7 @@ package com.example;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-//public class BusRepositoryTest {
+// public class BusRepositoryTest {
 //     @Test
 //     void shouldStoreValidBus() {
 //         BusRepository repo = new BusRepository();
@@ -15,3 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 //     }
 // }
+
+// add
+// update
+// count
+// retrieve
