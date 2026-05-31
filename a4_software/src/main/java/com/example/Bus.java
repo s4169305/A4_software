@@ -18,15 +18,15 @@ public class Bus {
         return busID;
     }
 
-    public int capacity() {
+    public int getCapacity() {
         return capacity;
     }
 
-    public double fuelLevel() {
+    public double getFuelLevel() {
         return fuelLevel;
     }
 
-    public String fuelType() {
+    public String getFuelType() {
         return fuelType;
     }
 
