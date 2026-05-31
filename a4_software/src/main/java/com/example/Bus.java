@@ -1,0 +1,34 @@
+package com.example;
+
+public class Bus {
+    private String busID;
+    private int capacity;
+    private double fuelLevel;
+    private String fuelType; // Diesel, Hybrid, Electricity
+
+
+    public Bus(String busID, int capacity, double fuelLevel, String fuelType) {
+        this.busID = busID;
+        this.capacity = capacity;
+        this.fuelLevel = fuelLevel;
+        this.fuelType = fuelType;
+}
+
+    public String getBusID() {
+        return busID;
+    }
+
+    public int capacity() {
+        return capacity;
+    }
+
+    public double fuelLevel() {
+        return fuelLevel;
+    }
+
+    public String fuelType() {
+        return fuelType;
+    }
+
+}
+
