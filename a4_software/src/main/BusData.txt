@@ -1,4 +1,0 @@
-busID: B1
-capacity: 40
-fuelLevel: 
-fuelType:

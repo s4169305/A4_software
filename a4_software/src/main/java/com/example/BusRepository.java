@@ -10,22 +10,29 @@ public class BusRepository {
     private List<Bus> buses = new ArrayList<>();
 
     // Add ()
+    // checking for duplicate bus IDs
     public void add(Bus bus) {
+        for (Bus b: buses) {
+            if (b.getBusID().equals(bus.getBusID())) {
+                throw new IllegalArgumentException("Duplicate bus ID: " + bus.getBusID());
+            }
+        }
         buses.add(bus);
     }
-
 
     // Update ()
     public boolean update(Bus bus) {
         for (int i = 0; i < buses.size(); i++) { // for every bus in the buses list
             if (Objects.equals(buses.get(i).getBusID(), bus.getBusID())) { // if the requested bus ID is found, changes can be set
+                if (bus.getCapacity() > buses.get(i).getCapacity()) {
+                    throw new IllegalArgumentException("Capacity cannot be increased");
+                }
                 buses.set(i, bus);
                 return true; // return updated values
             }
         }
         return false; // if requested bus ID is not found, it returns false
     }
-
 
     // Retrieve ()
     public Bus retrieve(String busID) {

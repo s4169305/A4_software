@@ -31,5 +31,6 @@ public class Bus {
         return fuelType;
     }
 
+// add setters
 }
 
