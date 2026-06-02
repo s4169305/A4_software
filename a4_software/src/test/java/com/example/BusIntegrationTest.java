@@ -25,11 +25,11 @@ public class BusIntegrationTest {
     void shouldRejectDuplicateBusId() throws IOException {
         BusRepository repo = new BusRepository();
         Bus bus1 = BusDataLoader.loadFromFile(Path.of("src/main/java/com/example/testData/BusData.txt")); // adding a new bus from BusDataLoader
-        Bus bus2 = BusDataLoader.loadFromFile(Path.of("src/main/java/com/example/testData/BusDataDuplicate.txt"));
+        Bus busDuplicate = BusDataLoader.loadFromFile(Path.of("src/main/java/com/example/testData/BusDataDuplicate.txt"));
 
         repo.add(bus1);
 
-        assertThrows(IllegalArgumentException.class, () -> repo.add(bus2));
+        assertThrows(IllegalArgumentException.class, () -> repo.add(busDuplicate));
         assertEquals(1, repo.count());
     }
 
@@ -84,7 +84,7 @@ public class BusIntegrationTest {
         assertEquals(1, repo.count());
 
         // adding another different bus
-        Bus bus2 = new Bus ("37427482", 40, 60.0, "Hybrid");
+        Bus bus2 = BusDataLoader.loadFromFile(Path.of("src/main/java/com/example/testData/BusData2.txt"));
         repo.add(bus2);
         assertEquals(2, repo.count());
 
