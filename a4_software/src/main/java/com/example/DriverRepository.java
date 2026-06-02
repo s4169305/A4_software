@@ -9,6 +9,12 @@ public class DriverRepository {
     private List<Driver> drivers = new ArrayList<>();
 
     public void add(Driver driver) {
+        // validate driver ID is exactly 8 digits
+        String driverID = driver.getDriverID();
+        if (driverID == null || driverID.length() != 8 || !driverID.matches("\\d+")) {
+            throw new IllegalArgumentException("Driver ID must be exactly 8 digits");
+        }
+        
         drivers.add(driver);
     }
 

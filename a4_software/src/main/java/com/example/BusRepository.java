@@ -12,6 +12,12 @@ public class BusRepository {
     // Add ()
     // checking for duplicate bus IDs
     public void add(Bus bus) {
+        // validate bus ID is exactly 8 digits
+        String busID = bus.getBusID();
+        if (busID == null || busID.length() != 8 || !busID.matches("\\d+")) {
+            throw new IllegalArgumentException("Bus ID must be exactly 8 digits");
+        }
+        
         for (Bus b: buses) {
             if (b.getBusID().equals(bus.getBusID())) {
                 throw new IllegalArgumentException("Duplicate bus ID: " + bus.getBusID());
