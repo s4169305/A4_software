@@ -2,7 +2,6 @@ package com.example;
 
 import java.util.ArrayList;
 import java.util.List;
-// Importing array and list
 
 public class DriverRepository {
 
