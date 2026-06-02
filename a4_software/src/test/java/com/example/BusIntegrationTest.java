@@ -7,7 +7,7 @@ import com.example.testData.BusDataLoader;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BusIntegrationTest {
-// checking if buses are valid
+    // checking if buses are valid
     @Test
     void shouldStoreValidBus() throws IOException {  // testing if a bus is added successfully
         Bus bus = BusDataLoader.loadFromFile(Path.of("src/main/java/com/example/testData/BusData.txt")); // adding a new bus from BusDataLoader
