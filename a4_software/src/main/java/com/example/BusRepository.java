@@ -10,7 +10,6 @@ public class BusRepository {
     private List<Bus> buses = new ArrayList<>();
 
     // Add ()
-    // checking for duplicate bus IDs
     public void add(Bus bus) {
         // validate bus ID is exactly 8 digits
         String busID = bus.getBusID();
@@ -18,6 +17,7 @@ public class BusRepository {
             throw new IllegalArgumentException("Bus ID must be exactly 8 digits");
         }
         
+        // checks for duplicate bus ID
         for (Bus b: buses) {
             if (b.getBusID().equals(bus.getBusID())) {
                 throw new IllegalArgumentException("Duplicate bus ID: " + bus.getBusID());
