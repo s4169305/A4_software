@@ -1,0 +1,4 @@
+busID: 19280
+capacity: 40
+fuelLevel: 60.0
+fuelType: Hybrid

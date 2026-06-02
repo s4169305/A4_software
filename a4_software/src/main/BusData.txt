@@ -1,4 +1,0 @@
-busID:
-capacity:
-fuelLevel:
-fuelType:
