@@ -25,7 +25,7 @@ public class BusIntegrationTest {
     void shouldRejectDuplicateBusId() throws IOException {
         BusRepository repo = new BusRepository();
         Bus bus1 = BusDataLoader.loadFromFile(Path.of("src/main/java/com/example/testData/BusData.txt")); // adding a new bus from BusDataLoader
-        Bus bus2 = new Bus (bus1.getBusID(), 40, 60.0, "Hybrid"); // test bus
+        Bus bus2 = BusDataLoader.loadFromFile(Path.of("src/main/java/com/example/testData/BusDataDuplicate.txt"));
 
         repo.add(bus1);
 
@@ -89,7 +89,7 @@ public class BusIntegrationTest {
         assertEquals(2, repo.count());
 
         // checking if a duplicate record affects record count
-        Bus busDuplicate = new Bus (bus.getBusID(), 40, 60.0, "Hybrid");
+        Bus busDuplicate = BusDataLoader.loadFromFile(Path.of("src/main/java/com/example/testData/BusDataDuplicate.txt"));
         assertThrows(IllegalArgumentException.class, () -> repo.add(busDuplicate));
 
         // verifying that count is still 2
