@@ -1,4 +1,4 @@
 busID: 12345678
 capacity: 50
 fuelLevel: 75.0
-fuelType: Diesel
+fuelType: Diese
