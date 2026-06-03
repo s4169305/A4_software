@@ -55,4 +55,26 @@ public class BusRepository {
     public int count() {
         return buses.size();
     }
+
+    // Checks if a driver is allowed to operate a bus
+    public boolean canDriverOperateBus(Driver driver, Bus bus, int driverAge) {
+
+        //B3: Drivers older then 50 cannot operate buses with a capacity 50 or more
+        if (driverAge > 50 && bus.getCapacity() >= 50) {
+            return false;
+        }
+
+        //B4: Electric buses require at least 5 years experience
+        if (bus.getFuelType().equals("Electricity") && driver.getExperienceYears() < 5) {
+            return false;
+        }
+
+        //B5: Electric and Hybrid buses need Heavy or PublicTransport license
+        if (bus.getFuelType().equals("Electricity") || bus.getFuelType().equals("Hybrid")) {
+            return driver.getLicenseType().equals("Heavy") || 
+            driver.getLicenseType().equals("PublicTransport");
+        }
+
+        return true;
+    }
 }
