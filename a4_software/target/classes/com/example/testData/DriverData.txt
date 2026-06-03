@@ -1,7 +1,0 @@
-DriverData
-driverID: 23@@TMR!AB
-name: RMIT Driver
-experienceYears: 6
-licenseType: Heavy
-address: 22|Swanstone Street|Melbourne|VIC|Australia
-birthdate: 28-03-1999

@@ -1,7 +1,0 @@
-DriverData 2
-driverID: 24##CAN!CD
-name: Canvas Driver
-experienceYears: 4
-licenseType: Light
-address: 29|Collins Street|Melbourne|VIC|Australia
-birthdate: 21-10-2000
