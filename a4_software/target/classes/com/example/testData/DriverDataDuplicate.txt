@@ -1,0 +1,7 @@
+DriverDataDuplicate
+driverID: 23@@TMR!AB
+name: Software Smith
+experienceYears: 7
+licenseType: medium
+address: 18|Swanstone Street|Melbourne|VIC|Australia
+birthdate: 28-03-1988
